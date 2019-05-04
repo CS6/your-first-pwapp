@@ -40,7 +40,11 @@ body {
   align-content: stretch;
   align-items: stretch;
   background: #ececec;
-  display: flex;
+  /* background-image: url("/images/SQbguWD.jpg"); */
+  background-image: url("/images/Xdg58wy.jpg");
+
+  
+    display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -51,9 +55,10 @@ body {
  */
 
 .header {
+
   align-content: center;
   align-items: stretch;
-  background: #3f51b5;
+  background: #F8C3CD;
   box-shadow:
     0 4px 5px 0 rgba(0, 0, 0, 0.14),
     0 2px 9px 1px rgba(0, 0, 0, 0.12),
@@ -118,6 +123,8 @@ body {
   margin-top: -16px;
   position: absolute;
   width: 100%;
+    background-image: url("/images/SQbguWD.jpg");
+
 }
 
 .card-spinner svg {
@@ -130,7 +137,7 @@ body {
 .card-spinner svg circle {
   animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite;
   box-sizing: border-box;
-  stroke: #3f51b5;
+  stroke: #F8C3CD;
   stroke-width: 3px;
   transform-origin: 50%;
 }
@@ -235,7 +242,7 @@ body {
 }
 
 .main .fab {
-  background-color: #3f51b5;
+  background-color:#F8C3CD;
   border-radius: 50%;
   bottom: 1rem;
   height: 56px;
@@ -325,10 +332,12 @@ body {
  */
 
 .weather-card {
-  background: #fff;
-  border-radius: 2px;
+  background: #fff9;
+  /* background-image: url("/images/SQbguWD.jpg"); */
+border-radius: 15px;
+  /* border-radius: 2px; */
   box-shadow:
-    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 2px 2px 0 rgba(255, 181, 181, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.2),
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;

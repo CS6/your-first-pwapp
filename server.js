@@ -26,15 +26,19 @@ const redirectToHTTPS = require('express-http-to-https').redirectToHTTPS;
 const FORECAST_DELAY = 0;
 
 // CODELAB: If running locally, set your Dark Sky API key here
-const API_KEY = process.env.DARKSKY_API_KEY;
+// const API_KEY = process.env.DARKSKY_API_KEY;
+const API_KEY = "3762f70e6e738bd2639ce0cc399d9efc";
+
+
 const BASE_URL = `https://api.darksky.net/forecast`;
+const LANG = `?lang=zh-tw&units=auto`;///中文話
 
 // Fake forecast data used if we can't reach the Dark Sky API
 const fakeForecast = {
   fakeData: true,
   latitude: 0,
   longitude: 0,
-  timezone: 'America/New_York',
+  timezone: 'America/New_York(ROC)',
   currently: {
     time: 0,
     summary: 'Clear',
@@ -140,7 +144,7 @@ function generateFakeForecast(location) {
  */
 function getForecast(req, resp) {
   const location = req.params.location || '40.7720232,-73.9732319';
-  const url = `${BASE_URL}/${API_KEY}/${location}`;
+  const url = `${BASE_URL}/${API_KEY}/${location}${LANG}`;///中文化
   fetch(url).then((resp) => {
     return resp.json();
   }).then((data) => {
